@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
+    <bottomTabBar></bottomTabBar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+import bottomTabBar from "@/components/bottomTabBar/bottomTabBar.vue"
+  // import index from "./pages/index/index"
+  // import cateList from "./pages/cateList/cateList"
+  // import recommend from "./pages/recommend/recommend"
+  // import cart from "./pages/cart/cart"
+  export default {
+    name: 'App',
+    components: {
+      bottomTabBar
+      // index,
+      // cateList,
+      // recommend,
+      // cart
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus">
+  @import url("./static/font/iconfont.styl")
+  #app
+    position relative
+    width 100%
+    height 100%
+  
 </style>
